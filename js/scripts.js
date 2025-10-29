@@ -51,4 +51,16 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Update copyright date
+    const updateCopyrightDate = function () {
+        const copyDateElements = document.querySelectorAll('.copy-date');
+        const currentYear = new Date().getFullYear();
+        copyDateElements.forEach(function (element) {
+            element.textContent = currentYear;
+        });
+    };
+
+    // Update copyright date on page load
+    updateCopyrightDate();
+
 });

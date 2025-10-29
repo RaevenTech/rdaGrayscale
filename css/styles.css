@@ -10996,6 +10996,17 @@ body {
   color: #000;
   font-weight: 700;
   padding: 0.9rem 0;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+@media (min-width: 576px) {
+  #mainNav .navbar-brand {
+    font-size: 1.1rem;
+    max-width: none;
+  }
 }
 #mainNav .navbar-nav .nav-item:hover {
   color: fade(#fff, 80%);
@@ -11056,12 +11067,27 @@ body {
 
 .btn {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  padding: 1.25rem 2rem;
+  padding: 1rem 1.5rem;
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 80%;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.1rem;
   border: 0;
+  width: auto;
+}
+@media (min-width: 576px) {
+  .btn {
+    padding: 1.15rem 1.75rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.12rem;
+  }
+}
+@media (min-width: 768px) {
+  .btn {
+    padding: 1.25rem 2rem;
+    font-size: 80%;
+    letter-spacing: 0.15rem;
+  }
 }
 
 .masthead {
@@ -11070,7 +11096,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/clouds-bg3.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11078,22 +11104,42 @@ body {
 }
 .masthead h1, .masthead .h1 {
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-  letter-spacing: 0.8rem;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.3rem;
   background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
+  word-wrap: break-word;
 }
 .masthead h2, .masthead .h2 {
-  max-width: 20rem;
-  font-size: 1rem;
+  max-width: 90%;
+  font-size: 0.9rem;
+  padding: 0 1rem;
+}
+@media (min-width: 576px) {
+  .masthead h1, .masthead .h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.5rem;
+  }
+  .masthead h2, .masthead .h2 {
+    font-size: 1rem;
+    max-width: 20rem;
+  }
 }
 @media (min-width: 768px) {
+  .masthead {
+    padding: 10rem 0;
+  }
   .masthead h1, .masthead .h1 {
     font-size: 4rem;
     line-height: 4rem;
+    letter-spacing: 0.6rem;
+  }
+  .masthead h2, .masthead .h2 {
+    font-size: 1.1rem;
   }
 }
 @media (min-width: 992px) {
@@ -11113,42 +11159,120 @@ body {
 }
 
 .about-section {
-  padding-top: 10rem;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
 }
+.about-section h2 {
+  font-size: 1.75rem;
+  padding: 0 1rem;
+}
 .about-section p {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .about-section {
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+  }
+  .about-section h2 {
+    font-size: 2rem;
+    padding: 0;
+  }
+  .about-section p {
+    margin-bottom: 4rem;
+    padding: 0;
+  }
+}
+@media (min-width: 992px) {
+  .about-section {
+    padding-top: 10rem;
+  }
+  .about-section p {
+    margin-bottom: 5rem;
+  }
 }
 
 .projects-section {
-  padding: 10rem 0;
+  padding: 5rem 0;
 }
 .projects-section .featured-text {
-  padding: 2rem;
+  padding: 2rem 1rem;
+}
+.projects-section .featured-text h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.projects-section .project-text {
+  padding: 2rem 1.5rem;
+  font-size: 90%;
+}
+.projects-section .project-text h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .projects-section {
+    padding: 7rem 0;
+  }
+  .projects-section .featured-text {
+    padding: 2rem;
+  }
+  .projects-section .featured-text h4 {
+    font-size: 1.75rem;
+  }
+  .projects-section .project-text {
+    padding: 3rem;
+  }
+  .projects-section .project-text h4 {
+    font-size: 1.75rem;
+  }
 }
 @media (min-width: 992px) {
+  .projects-section {
+    padding: 10rem 0;
+  }
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
     border-left: 0.5rem solid #64a19d;
   }
-}
-.projects-section .project-text {
-  padding: 3rem;
-  font-size: 90%;
-}
-@media (min-width: 992px) {
+  .projects-section .featured-text h4 {
+    font-size: 2rem;
+  }
   .projects-section .project-text {
     padding: 5rem;
+  }
+  .projects-section .project-text h4 {
+    font-size: 2rem;
   }
 }
 
 .signup-section {
-  padding: 10rem 0;
+  padding: 5rem 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../assets/img/bg-signup.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+}
+.signup-section h2 {
+  font-size: 1.75rem;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .signup-section {
+    padding: 7rem 0;
+  }
+  .signup-section h2 {
+    font-size: 2rem;
+    padding: 0;
+  }
+}
+@media (min-width: 992px) {
+  .signup-section {
+    padding: 10rem 0;
+  }
 }
 .signup-section .form-signup input {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
@@ -11162,17 +11286,18 @@ body {
 }
 
 .contact-section {
-  padding-top: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .contact-section .card {
   border: 0;
   border-bottom: 0.25rem solid #64a19d;
 }
 .contact-section .card h4, .contact-section .card .h4 {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-transform: uppercase;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.1rem;
 }
 .contact-section .card hr {
   opacity: 1;
@@ -11181,7 +11306,28 @@ body {
   width: 3rem;
 }
 .contact-section .social {
-  margin-top: 5rem;
+  margin-top: 3rem;
+}
+@media (min-width: 768px) {
+  .contact-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .contact-section .card h4, .contact-section .card .h4 {
+    font-size: 0.8rem;
+    letter-spacing: 0.15rem;
+  }
+  .contact-section .social {
+    margin-top: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .contact-section {
+    padding-top: 5rem;
+  }
+  .contact-section .social {
+    margin-top: 5rem;
+  }
 }
 .contact-section .social a {
   text-align: center;
@@ -11200,10 +11346,150 @@ body {
 }
 
 .footer {
-  padding: 5rem 0;
+  padding: 3rem 0;
+}
+@media (min-width: 768px) {
+  .footer {
+    padding: 4rem 0;
+  }
+}
+@media (min-width: 992px) {
+  .footer {
+    padding: 5rem 0;
+  }
 }
 
 /* Custom overrides */
 .tablet-img {
-  width: 40%;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+/* Make cloud-5 image cover its container */
+.cloud-5 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+@media (min-width: 768px) {
+  /* ensure reasonable vertical space when used inside grid columns */
+  .cloud-5 {
+    min-height: 320px;
+  }
+}
+@media (min-width: 576px) {
+  .tablet-img {
+    width: 80%;
+    max-width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .tablet-img {
+    width: 60%;
+    max-width: 60%;
+    padding: 0;
+  }
+}
+@media (min-width: 992px) {
+  .tablet-img {
+    width: 50%;
+    max-width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .tablet-img {
+    width: 40%;
+    max-width: 40%;
+  }
+}
+
+/* Team cards */
+.team-card {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(100, 161, 157, 0.3);
+  border-color: #64a19d;
+}
+
+.team-card .card-body {
+  padding: 1.5rem;
+}
+
+.team-avatar {
+  color: #64a19d;
+}
+
+.team-avatar i {
+  font-size: 3.5rem;
+}
+
+.team-card h4 {
+  font-size: 1.25rem;
+}
+
+.team-card p.text-primary {
+  font-size: 0.9rem;
+}
+
+.team-social {
+  margin-top: 1.5rem;
+}
+
+.team-social a {
+  display: inline-block;
+  width: 2.25rem;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.team-social a:hover {
+  background-color: #64a19d;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .team-card .card-body {
+    padding: 2rem;
+  }
+  .team-avatar i {
+    font-size: 4rem;
+  }
+  .team-card h4 {
+    font-size: 1.5rem;
+  }
+  .team-card p.text-primary {
+    font-size: 1rem;
+  }
+  .team-social a {
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .team-card .card-body {
+    padding: 2.5rem;
+  }
+  .team-avatar i {
+    font-size: 5rem;
+  }
 }
