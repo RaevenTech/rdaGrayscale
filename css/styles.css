@@ -11030,7 +11030,8 @@ body {
     color: #fff;
   }
   #mainNav.navbar-shrink {
-    background-color: #fff;
+    background-color: var(--bs-gray-600);
+    opacity: 0.98;
   }
   #mainNav.navbar-shrink .navbar-brand {
     color: #000;
@@ -11200,4 +11201,9 @@ body {
 
 .footer {
   padding: 5rem 0;
+}
+
+/* Custom overrides */
+.tablet-img {
+  width: 40%;
 }
