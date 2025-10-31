@@ -3562,7 +3562,7 @@ textarea.form-control-lg {
 }
 
 .dropdown-menu-dark {
-  --bs-dropdown-color: #dee2e6;
+  --bs-dropdown-color: #707070;
   --bs-dropdown-bg: #343a40;
   --bs-dropdown-border-color: var(--bs-border-color-translucent);
   --bs-dropdown-box-shadow: ;
@@ -10981,7 +10981,8 @@ body {
 
 #mainNav {
   min-height: 3.5rem;
-  background-color: #fff;
+  background-color:#4d5154;
+  opacity: 97%;
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
@@ -10993,7 +10994,7 @@ body {
   outline: none;
 }
 #mainNav .navbar-brand {
-  color: #000;
+  color: rgb(85, 85, 85);
   font-weight: 700;
   padding: 0.9rem 0;
   font-size: 1rem;
@@ -11001,6 +11002,9 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 200px;
+}
+#mainNav .nav-link {
+  color: rgb(85, 85, 85);
 }
 @media (min-width: 576px) {
   #mainNav .navbar-brand {
@@ -11495,13 +11499,44 @@ body {
 }
 
 /* Services section */
+.services_intro {
+  color: #64a19d;
+  font-size: 1rem;
+}
+
+.services_intro p {
+  margin-bottom: 0.75rem;
+}
+
+.services_list {
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+  text-align: left;
+}
+
 .services_list_item {
   color: #708090;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.services_list_item:last-child {
+  margin-bottom: 0;
+}
+
+.services_list_item_sub_list {
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
 }
 
 .services_list_item_sub_list_item {
   color: #fff;
   list-style-type: circle;
+  margin-bottom: 0.5rem;
+}
+
+.services_list_item_sub_list_item:last-child {
+  margin-bottom: 0;
 }
 
 .scroll-to-top {
@@ -11535,6 +11570,13 @@ body {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+.contact-modal .modal-content {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
 }
 
 .contact-modal .modal-content {
@@ -11579,5 +11621,37 @@ body {
 
 .contact-modal textarea.form-control {
   resize: none;
+}
+
+@media (max-width: 991.98px) {
+  #services .col-lg-6:first-child {
+    margin-bottom: 2rem;
+  }
+  .services_intro {
+    text-align: center;
+  }
+  .services_list {
+    text-align: center;
+    padding-left: 0;
+    list-style-position: inside;
+  }
+  .services_list_item_sub_list {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .scroll-to-top {
+    right: 1rem;
+    bottom: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .scroll-to-top i {
+    font-size: 0.9rem;
+  }
+  .services_intro {
+    font-size: 0.95rem;
+  }
 }
 
