@@ -11096,7 +11096,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/clouds-bg3.jpeg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/rda-sent-bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11412,6 +11412,8 @@ body {
   border-radius: 0.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 2rem;
+  width: 100%;
+  max-width: 350px;
 }
 
 .team-card:hover {
