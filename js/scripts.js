@@ -63,4 +63,27 @@ window.addEventListener('DOMContentLoaded', event => {
     // Update copyright date on page load
     updateCopyrightDate();
 
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+    if (scrollToTopButton) {
+        const toggleScrollToTop = () => {
+            if (window.scrollY > 200) {
+                scrollToTopButton.classList.add('scroll-to-top--visible');
+            } else {
+                scrollToTopButton.classList.remove('scroll-to-top--visible');
+            }
+        };
+
+        toggleScrollToTop();
+        document.addEventListener('scroll', toggleScrollToTop);
+
+        scrollToTopButton.addEventListener('click', () => {
+            setTimeout(() => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }, 200);
+        });
+    }
+
 });
