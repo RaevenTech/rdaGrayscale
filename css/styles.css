@@ -11655,3 +11655,18 @@ body {
   }
 }
 
+/* custom added styles */
+.services_btn{
+  color: white;
+  background: teal;
+  border:none;
+  margin-top: 20px;
+  padding: 5px 10px ;
+  border-radius: 5px;
+}
+
+.services_btn:hover{
+ cursor: pointer;
+ background: var(--bs-teal);
+ box-shadow: 2px 2px 2px teal;
+}
