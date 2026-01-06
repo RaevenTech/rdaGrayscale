@@ -11670,3 +11670,12 @@ body {
  background: var(--bs-teal);
  box-shadow: 2px 2px 2px teal;
 }
+
+/*--------------------------------------------------------------------------- Services Page Styling --------------------------------------------------------------------*/
+
+.services_page_title{
+  color: white;
+  font-size: x-large;
+  text-shadow:1px 5px 5px var(--bs-teal);
+  border: 1px solid white;
+}
