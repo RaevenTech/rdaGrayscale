@@ -11672,10 +11672,37 @@ body {
 }
 
 /*--------------------------------------------------------------------------- Services Page Styling --------------------------------------------------------------------*/
-
-.services_page_title{
+.services_section{
+  background-image: url(https://getwallpapers.com/wallpaper/full/9/e/c/749579-widescreen-black-and-white-background-images-1920x1080.jpg);
+}
+.services_bold{ 
   color: white;
-  font-size: x-large;
-  text-shadow:1px 5px 5px var(--bs-teal);
-  border: 1px solid white;
+}
+
+.services_section_one_container{
+  border: 1px solid teal;
+  background:grey;
+  padding: 10px;
+}
+
+.services_section_left_container_heading{
+  text-align: center;
+  border: 1px solid red;
+  color: #fff;
+  font-weight: bolder;
+  
+}
+
+.services_section_left_container_sub_txt{
+  color: whitesmoke;
+  font-size: medium;
+}
+
+.services_section_right_container{
+  
+}
+
+.services_sub_heading{
+  padding-left: 20px;
+  border: 1px solid blue;
 }
