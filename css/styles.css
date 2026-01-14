@@ -169,7 +169,9 @@ h6, .h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 }
 
 abbr[title] {
@@ -8243,11 +8245,15 @@ textarea.form-control-lg {
 .text-black-50 {
   --bs-text-opacity: 1;
   color: rgba(0, 0, 0, 0.5) !important;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 }
 
 .text-white-50 {
   --bs-text-opacity: 1;
   color: rgba(255, 255, 255, 0.5) !important;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 }
 
 .text-reset {
@@ -11069,6 +11075,53 @@ body {
   }
 }
 
+/* Dropdown menu styling for navbar */
+#mainNav .dropdown-menu {
+  background-color: #4d5154;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.375rem;
+  margin-top: 0.5rem;
+}
+
+#mainNav .dropdown-item {
+  color: whitesmoke;
+  padding: 0.75rem 1.5rem;
+}
+
+#mainNav .dropdown-item:hover,
+#mainNav .dropdown-item:focus {
+  background-color: rgba(100, 161, 157, 0.2);
+  color: #fff;
+}
+
+#mainNav .dropdown-toggle::after {
+  border-top-color: whitesmoke;
+}
+
+@media (min-width: 992px) {
+  #mainNav .dropdown-menu {
+    background-color: rgba(77, 81, 84, 0.95);
+  }
+  
+  #mainNav.navbar-shrink .dropdown-menu {
+    background-color: #4d5154;
+  }
+  
+  #mainNav.navbar-shrink .dropdown-item {
+    color: #000;
+  }
+  
+  #mainNav.navbar-shrink .dropdown-item:hover,
+  #mainNav.navbar-shrink .dropdown-item:focus {
+    background-color: rgba(100, 161, 157, 0.2);
+    color: #64a19d;
+  }
+  
+  #mainNav.navbar-shrink .dropdown-toggle::after {
+    border-top-color: #000;
+  }
+}
+
 .btn {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1rem 1.5rem;
@@ -11174,6 +11227,8 @@ body {
 .about-section p {
   margin-bottom: 3rem;
   padding: 0 1rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 }
 @media (min-width: 768px) {
   .about-section {
@@ -11204,17 +11259,29 @@ body {
 .projects-section .featured-text {
   padding: 2rem 1rem;
 }
+.projects-section .featured-text p {
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.25rem;
+}
 .projects-section .featured-text h4 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  line-height: 1.4;
 }
 .projects-section .project-text {
   padding: 2rem 1.5rem;
   font-size: 90%;
 }
+.projects-section .project-text p {
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.25rem;
+}
 .projects-section .project-text h4 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  line-height: 1.4;
 }
 @media (min-width: 768px) {
   .projects-section {
@@ -11308,6 +11375,12 @@ body {
   border-color: #64a19d;
   border-width: 0.25rem;
   width: 3rem;
+  margin: 1.5rem auto;
+}
+
+.contact-section .card .small {
+  line-height: 1.6;
+  letter-spacing: 0.01em;
 }
 .contact-section .social {
   margin-top: 3rem;
@@ -11442,6 +11515,13 @@ body {
 
 .team-card p.text-primary {
   font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.team-card p.text-white-50 {
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 }
 
 .team-social {
@@ -11502,10 +11582,13 @@ body {
 .services_intro {
   color: #64a19d;
   font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 }
 
 .services_intro p {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
 }
 
 .services_list {
@@ -11516,8 +11599,9 @@ body {
 
 .services_list_item {
   color: #708090;
-  margin-bottom: 0.75rem;
-  line-height: 1.6;
+  margin-bottom: 0.875rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 }
 
 .services_list_item:last-child {
@@ -11532,7 +11616,9 @@ body {
 .services_list_item_sub_list_item {
   color: #fff;
   list-style-type: circle;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.625rem;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
 }
 
 .services_list_item_sub_list_item:last-child {
@@ -11632,11 +11718,11 @@ body {
   }
   .services_list {
     text-align: center;
-    padding-left: 0;
+    padding-left: 0px;
     list-style-position: inside;
   }
-  .services_list_item_sub_list {
-    padding-left: 0;
+  .services_list_item {
+    padding-left: 10px;
   }
 }
 
@@ -11652,6 +11738,14 @@ body {
   }
   .services_intro {
     font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .services_intro p {
+    margin-bottom: 1rem;
+  }
+  #service_txt p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
   }
 }
 
@@ -11673,8 +11767,11 @@ body {
 
 /*--------------------------------------------------------------------------- Services Page Styling --------------------------------------------------------------------*/
 .services_section{
-  background-image: url(https://getwallpapers.com/wallpaper/full/9/e/c/749579-widescreen-black-and-white-background-images-1920x1080.jpg);
+  background-image: url(https://img.freepik.com/free-vector/gradient-black-technology-background_23-2149209060.jpg?semt=ais_hybrid&w=740&q=80);
+  background-color: #116776;
+  
 }
+
 .services_bold{ 
   color: white;
 }
@@ -11696,13 +11793,51 @@ body {
 .services_section_left_container_sub_txt{
   color: whitesmoke;
   font-size: medium;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  margin-bottom: 1rem;
 }
 
-.services_section_right_container{
-  
-}
 
 .services_sub_heading{
   padding-left: 20px;
   border: 1px solid blue;
 }
+
+.neon_number{
+  background-color: #000;
+  opacity:40%;
+}
+
+.neon_number_left{
+  height: 100%;
+  width: 100%;
+  padding-top: 20px;
+
+}
+
+#service_txt{
+  padding: 30px 50px;
+}
+
+#service_txt p {
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.25rem;
+}
+
+#service_txt h4 {
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
+}
+
+#service_txt h5 {
+  line-height: 1.4;
+  margin-top: 1.5rem;
+  margin-bottom: 0.875rem;
+}
+
+.services_sub_txt{
+  color:var(--bs-teal)
+}
+
